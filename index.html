@@ -9,56 +9,82 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<link rel="stylesheet" href="src/style.css?id=102" />
+
 	<meta charset="UTF-8" />
 	<title>Convert Text</title>
 </head>
 
 <body>
+	<div class="content">
 
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">Convert Text</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-			aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">Convert Text</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+				aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-		<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Link</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-				</li>
-			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search" placeholder="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-			</form>
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+
+		<div class="container">
+
+
+			<textarea style="height: 250px;" id="story" name="story" rows="5" cols="100%"
+				placeholder="Insira seu texto aqui"></textarea>
+
 		</div>
-	</nav>
 
+		<div style="margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px;" class="container">
+			<p>Caracteres: 9999 | Palavras: 9999 | Linhas: 9999</p>
+		</div>
 
-	<div class="container">
-
-		<div class="row">
-			<div class="col">
-				<textarea id="story" name="story" rows="5" cols="33" placeholder="Insira seu texto aqui"></textarea>
+		<div style="margin-top: 0px; margin-bottom: 0px; padding-top: 0px;" class="container">
+			<div>
+				<button style="margin-top: 5px;" type="button" class="btn btn-secondary">Secondary</button>
+				<button style="margin-top: 5px;" type="button" class="btn btn-secondary">Secondary</button>
+				<button style="margin-top: 5px;" type="button" class="btn btn-secondary">Secondary</button>
+				<button style="margin-top: 5px;" type="button" class="btn btn-secondary">Secondary</button>
+				<button style="margin-top: 5px;" type="button" class="btn btn-secondary">Secondary</button>
 			</div>
-			<div class="col">
-				<button type="button" class="btn btn-secondary mt">Secondary</button>
-				<button type="button" class="btn btn-secondary mt">Secondary</button>
-				<button type="button" class="btn btn-secondary mt">Secondary</button>
-				<button type="button" class="btn btn-secondary mt">Secondary</button>
-			</div>
-		  </div>
 
+		</div>
+
+		<div style="background-color: whitesmoke;" class="container">
+			<div>
+				<div>
+					<h3>Título</h3>
+					<p style="text-align: center;">Texto</p>
+				</div>
+			</div>
+		</div>
 
 	</div>
 
+	<footer id="myFooter" style="margin: 0px; padding: 0px;">
+		<div class="container">
+			<div>
+				<ul>
+					<li><a href="https://www.facebook.com/sharer/sharer.php?u=cristianfreire.github.io" id="facebook-share-btt" rel="nofollow" target="_blank" class="facebook-share-button">Compartilhar no Facebook</a></li>
+				</ul>
+				<p class="footer-copyright">© 2020 Copyright - Cristian Freire</p>
+
+			</div>
+		</div>
+	</footer>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -69,6 +95,8 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 		crossorigin="anonymous"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
