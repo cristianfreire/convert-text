@@ -1,0 +1,34 @@
+<body onLoad="WordCountOnLine();">
+
+    <script type="text/javascript">
+        function WordCountOnLine() {
+            if (document.getElementById("textarea").value != null) {
+                textoArea = document.getElementById("area_texto").value;
+
+                inicioBlanco = /^ /
+                finBlanco = / $/
+
+                variosBlancos = /[ ]+/g
+                textoArea = textoArea.replace(inicioBlanco, "");
+                textoArea = textoArea.replace(finBlanco, "");
+                textoArea = textoArea.replace(variosBlancos, " ");
+                textoAreaDividido = textoArea.split(" ");
+                numeroPalabras = textoAreaDividido.length;
+
+                document.getElementById("palabras").value = numeroPalabras;
+                setTimeout("WordCountOnLine();", 300);
+            }else{
+                
+            }
+        }
+    </script>
+
+    <form name="formulario">
+        <fieldset>
+            <legend>Encode/Decode</legend>
+            <label for="area_texto">Digite sua mensagem:</label><br>
+            <textarea id="area_texto" rows=10 cols=50></textarea><br>
+            <label for="palabras">Número de palabras:</label>
+            <input style="border:0;" id="palabras" type="text" size="0">
+        </fieldset>
+    </form>

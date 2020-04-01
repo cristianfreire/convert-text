@@ -1,28 +1,41 @@
 function mod(n) {
-    var textOrigin = document.getElementById("textarea").value
+    var textOrigin = document.getElementById("textarea").value  //Texto original dentro da variável
+    var tam = textOrigin.length //Tamanho de characteres
 
+    //All in LowerCase
     if (n == 1) {
         document.getElementById("textarea").value = textOrigin.toLowerCase()
-    }else if (n == 2){
+
+        //All in UpperCase
+    } else if (n == 2) {
         document.getElementById("textarea").value = textOrigin.toUpperCase()
-    }else if (n == 3){
-        var tam = textOrigin.length
-        var alternado = ""
 
-        console.log(tam)
-
-        for (var l = 0; l < tam; l++){
-            if (l % 2 == 0){
-              document.write(textOrigin[l].toUpperCase())
-            }else {
-              document.write(textOrigin[l].toLowerCase()  )
-            }
-            
+        //AlTeRnAtInG
+    } else if (n == 3) {
+        var AlT = textOrigin.toLowerCase().split("")
+        for (var i = 0; i < tam; i += 2) {
+            AlT[i] = AlT[i].toUpperCase()
         }
-        
-        console.log(textOrigin)
+        document.getElementById("textarea").value = AlT.join("")
 
-        //document.getElementById("textarea").value = textOrigin
+        //aLtErNaTiNg 
+    } else if (n == 4) {
+        var aLt = textOrigin.toUpperCase().split("")
+        for (var i = 0; i < tam; i += 2) {
+            aLt[i] = aLt[i].toLowerCase()
+        }
+        document.getElementById("textarea").value = aLt.join("")
+
+        //Primeire letra
+    } else if (n == 5) {
+        function primeiraLetraMaiuscula(Frase) {
+            var splitFrase = textOrigin.replace(/(?:^|\s)\S/g, function (a) { return a.toUpperCase(); });
+            return splitFrase
+
+        }
+        var result = primeiraLetraMaiuscula()
+        document.getElementById("textarea").value = result
     }
-}
 
+
+}
