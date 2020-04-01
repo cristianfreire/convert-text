@@ -13,6 +13,32 @@
 
 	<link rel="stylesheet" href="src/style.css?id=102" />
 
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$("textarea").keyup(function () {
+				sendCode()
+			})
+		})
+
+		function sendCode() {
+			var texto = document.getElementById("textarea").value
+
+			if (document.getElementById("textarea") != null) {
+				document.getElementById("char").innerHTML = texto.length
+				document.getElementById("word").innerHTML = texto.split(' ').length
+				document.getElementById("lines").innerHTML = texto.split('\n').length
+
+			} else if (document.getElementById("textarea") == null) {
+				document.getElementById("char").innerHTML = 0
+				document.getElementById("word").innerHTML = 0
+				document.getElementById("lines").innerHTML = 0
+			}
+
+		}
+	</script>
+
+
 	<meta charset="UTF-8" />
 	<title>Convert Text</title>
 </head>
@@ -34,7 +60,7 @@
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">vaporwave</a>
-					</li>	
+					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">r̶i̶s̶c̶a̶d̶o̶</a>
 					</li>
@@ -49,9 +75,6 @@
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">código binário</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Título</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#"><b>negrito</b> ou <i>itálico</i></a>
@@ -71,29 +94,39 @@
 
 
 		<div style="margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px;" class="container">
-			<p>Caracteres: <p id="char"></p> | Palavras: <p id="word"></p> | Linhas: <p id="lines"></p> </p>
+			<p>Characteres: </p>
+			<p id="char">0</p>
+			<p>| Palavras: </p>
+			<p id="word"> 0 </p>
+			<p>| Linhas:</p>
+			<p id="lines">0</p>
 		</div>
 
 		<div style="margin-top: 0px; margin-bottom: 0px; padding-top: 0px;" class="container">
 			<div>
-				<button onclick="mod(1)" style="margin-top: 5px;" type="button" class="btn btn-secondary">minúsculo</button>
-				<button onclick="mod(2)" style="margin-top: 5px;" type="button" class="btn btn-secondary">MAIÚSCULO</button>
-				<button onclick="mod(3)" style="margin-top: 5px;" type="button" class="btn btn-secondary">AlTeRnAdO</button>
-				<button onclick="mod(4)" style="margin-top: 5px;" type="button" class="btn btn-secondary">aLtErNaDo</button>
-				<button onclick="mod(5)" style="margin-top: 5px;" type="button" class="btn btn-secondary">Somente primeira letra</button>
+				<button onclick="mod(1)" style="margin-top: 5px;" type="button"
+					class="btn btn-secondary">minúsculo</button>
+				<button onclick="mod(2)" style="margin-top: 5px;" type="button"
+					class="btn btn-secondary">MAIÚSCULO</button>
+				<button onclick="mod(3)" style="margin-top: 5px;" type="button"
+					class="btn btn-secondary">AlTeRnAdO</button>
+				<button onclick="mod(4)" style="margin-top: 5px;" type="button"
+					class="btn btn-secondary">aLtErNaDo</button>
+				<button onclick="mod(5)" style="margin-top: 5px;" type="button" class="btn btn-secondary">Primeira letra
+					da palavra</button>
 			</div>
 
 		</div>
-		
 
-		<div style="background-color: whitesmoke;" class="container">
+
+		<!--div style="background-color: whitesmoke;" class="container">
 			<div>
 				<div>
 					<h3>Título</h3>
 					<p style="text-align: center;">Texto</p>
 				</div>
 			</div>
-		</div>
+		</div -->
 
 	</div>
 
@@ -101,7 +134,9 @@
 		<div class="container">
 			<div>
 				<ul>
-					<li><a href="https://www.facebook.com/sharer/sharer.php?u=cristianfreire.github.io" id="facebook-share-btt" rel="nofollow" target="_blank" class="facebook-share-button">Compartilhar no Facebook</a></li>
+					<li><a href="https://www.facebook.com/sharer/sharer.php?u=cristianfreire.github.io"
+							id="facebook-share-btt" rel="nofollow" target="_blank"
+							class="facebook-share-button">Compartilhar no Facebook</a></li>
 				</ul>
 				<p class="footer-copyright">© 2020 Copyright - Cristian Freire</p>
 
