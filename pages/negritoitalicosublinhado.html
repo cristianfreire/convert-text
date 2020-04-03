@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
-<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="pt-br">
 
 <head>
 
@@ -10,60 +10,11 @@
 
     <link rel="stylesheet" href="../src/style.css">
 
+    <script src="../src/script.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invertido</title>
-
-    <script type="text/javascript" src="../src/inverter.js"></script>
-
-    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(
-            function() {
-                $("textarea").keyup(
-                    function() {
-                        sendCode()
-                    })
-
-            })
-
-        function sendCode() {
-            var texto = document.getElementById("textarea").value
-
-
-            document.getElementById("char").innerHTML = texto.length
-            document.getElementById("word").innerHTML = texto.split(' ').length
-            document.getElementById("lines").innerHTML = texto.split('\n').length
-
-            if (texto == "") {
-                document.getElementById("word").innerHTML = 0
-                document.getElementById("lines").innerHTML = 0
-
-            }
-
-        }
-
-
-        function inverter(n) {
-            var entrada = document.getElementById("textarea")
-
-            if (n == 1) {
-
-                entrada.value = entrada.value.trim()
-
-                var _e_count = entrada.value.length
-                var _str_tmp = ""
-                for (var i = _e_count - 1; i >= 0; i--) {
-                    _str_tmp += entrada.value[i]
-                }
-
-                entrada.value = _str_tmp
-            } else {
-                entrada.split('').reverse().join('')
-            }
-
-        }
-    </script>
+    <title>negrito, itálico ou sublinhado</title>
 </head>
 
 <body>
@@ -87,41 +38,27 @@
                         <a class="nav-link" href="riscado.html">r̶i̶s̶c̶a̶d̶o̶</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">retrevni ou ɹǝʇɹǝʌuᴉ</a>
+                        <a class="nav-link" href="invertido.html">retrevni ou ɹǝʇɹǝʌuᴉ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="morsebinario.html">morse ou binário</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="negritoitalicosublinhado.html"><b>negrito</b> ou <i>itálico</i></a>
+                        <a class="nav-link" href="#"><b>negrito</b>, <i>itálico</i> ou <u>sublinhado</u></a>
                     </li>
                 </ul>
             </div>
         </nav>
-
-        <div style="margin-top: 10px; padding: 0px; text-align: center; align-items: center;" class="container">
-            <h1 style="font-size: 20px; text-align: center;">Inverter</h1>
-        </div>
 
         <div class="container">
             <textarea name="original" id="textarea" style="height: 250px; " rows="5" cols="100%" placeholder="Texto para trás"></textarea>
         </div>
 
         <div class="container">
-            <button style="margin-right: 10px;" onclick="inverter(1)" type="button" class="btn btn-secondary">retrevni</button>
-            <button onclick="flip()" type="button" class="btn btn-secondary ">ɹǝʇɹǝʌuᴉ</button>
-        </div>
-
-
-
-
-        <div style="margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px;" class="container">
-            <p>Characteres: </p>
-            <p id="char">0</p>
-            <p>| Palavras: </p>
-            <p id="word"> 0 </p>
-            <p>| Linhas:</p>
-            <p id="lines">0</p>
+            <button style="margin-right: 10px;" onclick="mod(6)" type="button" class="btn btn-secondary"><b>negrito</b></button>
+            <button style="margin-right: 10px;" onclick="mod(7)" type="button" class="btn btn-secondary "><i>itálico</i></button>
+            <button style="margin-right: 10px;" onclick="mod(8)" type="button" class="btn btn-secondary "><u>sublinhado</u></button>
+            <button style="margin-right: 10px;" onclick="mod(9)" type="button" class="btn btn-success ">normal</button>
         </div>
     </div>
 

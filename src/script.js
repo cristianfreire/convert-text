@@ -1,5 +1,5 @@
 function mod(n) {
-    var textOrigin = document.getElementById("textarea").value  //Texto original dentro da variável
+    var textOrigin = document.getElementById("textarea").value //Texto original dentro da variável
     var tam = textOrigin.length //Tamanho de characteres
 
     //All in LowerCase
@@ -29,12 +29,22 @@ function mod(n) {
         //Primeire letra
     } else if (n == 5) {
         function primeiraLetraMaiuscula(Frase) {
-            var splitFrase = textOrigin.replace(/(?:^|\s)\S/g, function (a) { return a.toUpperCase(); });
+            var splitFrase = textOrigin.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
             return splitFrase
 
         }
         var result = primeiraLetraMaiuscula()
         document.getElementById("textarea").value = result
+    } else if (n == 6) {
+        document.getElementById("textarea").style.fontWeight = "bold"
+    } else if (n == 7) {
+        document.getElementById("textarea").style.fontStyle = "italic"
+    } else if (n == 8) {
+        document.getElementById("textarea").style.textDecoration = "underline"
+    } else if (n == 9) {
+        document.getElementById("textarea").style.fontWeight = "normal"
+        document.getElementById("textarea").style.fontStyle = "normal"
+        document.getElementById("textarea").style.textDecoration = "none"
     }
 
 
