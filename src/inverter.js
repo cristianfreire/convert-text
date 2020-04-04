@@ -30,7 +30,7 @@ function flipChar(c) {
     } else if (c == 'g') {
         return '\u0183'
     } else if (c == 'h') {
-        return '\u026   5'
+        return '\u0265'
     } else if (c == 'i') {
         return '\u0131' //'\u0131\u0323' 
     } else if (c == 'j') {
