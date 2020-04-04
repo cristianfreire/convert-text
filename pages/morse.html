@@ -8,10 +8,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="imagem/png" href="../src/266052.png" />
 
-    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="../src/style.css?bgs=455">
 
-    <script src="../src/morse.js"></script>
-    <script src="../src/encodemorse.js"></script>
+    <script src="../src/morse.js?op=07"></script>
+    <script src="../src/encodemorse.js?sh=36"></script>
+
+    <script>
+        function contador() {
+            characteres = document.getElementById("textarea").value
+
+            document.getElementById("char").innerHTML = characteres.length
+            document.getElementById("words").innerHTML = characteres.split(" ").length
+            document.getElementById("lines").innerHTML = characteres.split("\n").length
+
+            if (characteres.length == 0) {
+                document.getElementById("words").innerHTML = 0
+                document.getElementById('lines').innerHTML = 0
+            }
+        }
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,10 +70,21 @@
         </nav>
 
         <div class="container">
-            <textarea onkeyup="testem()" style="height: 250px;" id="textarea" rows="5" cols="100%" placeholder="Insira seu texto aqui"></textarea>
-            <textarea onkeyup="encodedecode()" style="height: 250px; margin-left: 10px;" id="morse" rows="5" cols="100%" placeholder=".. -. ... .. .-. .- / ... . ..- / - . -..- - --- / .- --.- ..- .."></textarea>
+            <textarea onkeyup="testem(), contador()" style="height: 250px;" id="textarea" rows="5" cols="100%" placeholder="Insira seu texto aqui"></textarea>
+            <textarea onkeyup="encodedecode(), contador()" style="height: 250px; margin-left: 10px;" id="morse" rows="5" cols="100%" placeholder=".. -. ... .. .-. .- / ... . ..- / - . -..- - --- / .- --.- ..- .."></textarea>
         </div>
 
+        <div class="container">
+            <p>Caracteres:
+                <p id="char"> 0 </p>
+            </p>
+            <p> | Palavras:
+                <p id="words"> 0 </p>
+            </p>
+            <p> | Linhas:
+                <p id="lines"> 0 </p>
+            </p>
+        </div>
 
 
         <div style="margin: 0px; padding: 0px;" class="container">
