@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="../src/style.css?kd=09">
 
-    <script src="../src/script.js?po=20"></script>
+    <script src="../src/script.js"></script>
 
     <script>
         function contador() {
@@ -50,7 +50,7 @@
                         <a class="nav-link" href="vaporwave.html">vaporwave</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="riscado.html">r̶i̶s̶c̶a̶d̶o̶</a>
+                        <a class="nav-link" href="tachado.html">t̶a̶c̶h̶a̶d̶o̶</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="invertido.html">retrevni ou ɹǝʇɹǝʌuᴉ</a>
@@ -72,6 +72,10 @@
             <textarea onkeyup="contador()" name="original" id="textarea" style="height: 250px; " rows="5" cols="100%" placeholder="Texto para trás"></textarea>
         </div>
 
+        <div style="background-color: white;" class="container">
+            <span style="font-weight: bold;" id="teste" translate="no"></span>
+        </div>
+
         <div class="container">
             <p>Caracteres:
                 <p id="char"> 0 </p>
@@ -85,7 +89,7 @@
         </div>
 
         <div class="container">
-            <button style="margin-right: 10px;" onclick="mod(6)" type="button" class="btn btn-secondary"><b>negrito</b></button>
+            <button style="margin-right: 10px;" onclick="negrito()" type="button" class="btn btn-secondary"><b>negrito</b></button>
             <button style="margin-right: 10px;" onclick="mod(7)" type="button" class="btn btn-secondary "><i>itálico</i></button>
             <button style="margin-right: 10px;" onclick="mod(8)" type="button" class="btn btn-secondary "><u>sublinhado</u></button>
             <button style="margin-right: 10px;" onclick="mod(9)" type="button" class="btn btn-success ">normal</button>

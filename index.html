@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="src/style.css?id=102" />
 
-    <script type="text/javascript" src="src/script.js?id=897"></script>
+    <script type="text/javascript" src="src/script.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -35,6 +35,17 @@
 
             }
 
+        }
+
+        let copiarTexto = () => {
+            //captura o elemento input
+            const inputTest = document.querySelector("#textarea")
+
+            //seleciona todo o texto do elemento
+            inputTest.select()
+                //executa o comando copy
+                //aqui é feito o ato de copiar para a area de trabalho com base na seleção
+            document.execCommand('copy')
         }
     </script>
 
@@ -61,7 +72,7 @@
                         <a class="nav-link" href="pages/vaporwave.html">vaporwave</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/riscado.html">r̶i̶s̶c̶a̶d̶o̶</a>
+                        <a class="nav-link" href="pages/tachado.html">t̶a̶c̶h̶a̶d̶o̶</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="pages/invertido.html">retrevni ou ɹǝʇɹǝʌuᴉ</a>
@@ -101,9 +112,12 @@
                 <button onclick="mod(3)" style="margin-top: 5px;" type="button" class="btn btn-secondary">AlTeRnAdO</button>
                 <button onclick="mod(4)" style="margin-top: 5px;" type="button" class="btn btn-secondary">aLtErNaDo</button>
                 <button onclick="mod(5)" style="margin-top: 5px;" type="button" class="btn btn-secondary">Primeira letra da palavra</button>
+                <button onclick="copiarTexto()" style="margin-top: 5px;" type="button" class="btn btn-success">Copiar</button>
             </div>
 
         </div>
+
+
 
 
         <!--div style="background-color: whitesmoke;" class="container">

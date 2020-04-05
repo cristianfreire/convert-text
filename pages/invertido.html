@@ -63,6 +63,17 @@
             }
 
         }
+
+        let copiarTexto = () => {
+            //captura o elemento input
+            const inputTest = document.querySelector("#textarea")
+
+            //seleciona todo o texto do elemento
+            inputTest.select()
+                //executa o comando copy
+                //aqui é feito o ato de copiar para a area de trabalho com base na seleção
+            document.execCommand('copy')
+        }
     </script>
 </head>
 
@@ -84,7 +95,7 @@
                         <a class="nav-link" href="vaporwave.html">vaporwave</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="riscado.html">r̶i̶s̶c̶a̶d̶o̶</a>
+                        <a class="nav-link" href="tachado.html">t̶a̶c̶h̶a̶d̶o̶</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">retrevni ou ɹǝʇɹǝʌuᴉ</a>
@@ -122,7 +133,9 @@
 
         <div class="container">
             <button style="margin-right: 10px;" onclick="inverter(1)" type="button" class="btn btn-secondary">retrevni</button>
-            <button onclick="flip()" type="button" class="btn btn-secondary ">ɹǝʇɹǝʌuᴉ</button>
+            <button style="margin-right: 10px;" onclick="flip()" type="button" class="btn btn-secondary ">ɹǝʇɹǝʌuᴉ</button>
+            <button onclick="copiarTexto()" type="button" class="btn btn-success">Copiar</button>
+
         </div>
 
 

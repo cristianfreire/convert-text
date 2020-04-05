@@ -36,7 +36,8 @@ function mod(n) {
         var result = primeiraLetraMaiuscula()
         document.getElementById("textarea").value = result
     } else if (n == 6) {
-        document.getElementById("textarea").style.fontWeight = "bold"
+        console.log(textOrigin)
+        document.getElementById("resultado").innerHTML = textOrigin
     } else if (n == 7) {
         document.getElementById("textarea").style.fontStyle = "italic"
     } else if (n == 8) {
@@ -48,4 +49,19 @@ function mod(n) {
     }
 
 
+}
+
+function negrito() {
+    $("#teste").text(document.getElementById("textarea").value)
+}
+
+function tachado() {
+    var texto = document.getElementById("textarea").value
+    result = ""
+    for (var lk = 0; lk <= texto.length; lk++) {
+        result += texto[lk] + "̶"
+    }
+
+    result = result.split("undefined")
+    document.getElementById("result").value = result.join("")
 }
