@@ -30,6 +30,20 @@
 
         function sendCode() {
             italico()
+            contador()
+        }
+
+        function contador() {
+            characteres = document.getElementById("textarea").value
+
+            document.getElementById("char").innerHTML = "Characteres: " + characteres.length
+            document.getElementById("words").innerHTML = " Palavras: " + characteres.split(" ").length
+            document.getElementById("lines").innerHTML = " Linhas: " + characteres.split("\n").length
+
+            if (characteres.length == 0) {
+                document.getElementById("words").innerHTML = " Palavras: " + 0
+                document.getElementById('lines').innerHTML = " Linhas: " + 0
+            }
 
 
         }
@@ -54,7 +68,7 @@
                         <a class="nav-link" href="vaporwave.html">vaporwave</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">t̶a̶c̶h̶a̶d̶o̶</a>
+                        <a class="nav-link" href="tachado.html">t̶a̶c̶h̶a̶d̶o̶</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="invertido.html">retrevni ou ɹǝʇɹǝʌuᴉ</a>
@@ -63,7 +77,7 @@
                         <a class="nav-link" href="negrito.html"><b>negrito</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="italico.html"><i>itálico</i></u></a>
+                        <a class="nav-link" href="#"><i>itálico</i></u></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="sublinhado.html"><u>sublinhado</u></a>
@@ -88,17 +102,16 @@
         </div>
 
 
-        <div style="margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; " class="container ">
-            <p>Characteres: </p>
-            <p id="char">0</p>
-            <p>| Palavras: </p>
-            <p id="word"> 0 </p>
-            <p>| Linhas:</p>
-            <p id="lines">0</p>
+        <div class="container">
+            <p id="char">Characteres: </p>
+            <p style="margin-left: 10px;" id="words">Palavras: </p>
+            <p style="margin-left: 10px;" id="lines">Linhas: </p>
         </div>
 
         <div style="margin-top: 0px; margin-bottom: 0px; padding: 0px;" class="container">
-            <button onclick="copiarTextoiii()" style="margin-top: 5px;" type="button" class="btn btn-success">Copiar</button>
+            <button style="margin-right: 10px;" onclick="copiarTextoiii()" style="margin-top: 5px;" type="button" class="btn btn-success">Copiar</button>
+            <button style="margin-top: 0px;" onclick="download()" style="margin-top: 5px;" type="button" class="btn btn-primary">Download</button>
+
         </div>
 
 

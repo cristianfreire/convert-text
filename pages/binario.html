@@ -18,23 +18,23 @@
         function contador() {
             characteres = document.getElementById("textarea").value
 
-            document.getElementById("char").innerHTML = "Characteres: " + characteres.length + " |"
-            document.getElementById("words").innerHTML = " Palavras: " + characteres.split(" ").length + " |"
+            document.getElementById("char").innerHTML = "Characteres: " + characteres.length
+            document.getElementById("words").innerHTML = " Palavras: " + characteres.split(" ").length
             document.getElementById("lines").innerHTML = " Linhas: " + characteres.split("\n").length
 
             if (characteres.length == 0) {
-                document.getElementById("words").innerHTML = 0
-                document.getElementById('lines').innerHTML = 0
+                document.getElementById("words").innerHTML = " Palavras: " + 0
+                document.getElementById('lines').innerHTML = " Linhas: " + 0
             }
 
-            setTimeout("textobin()", 100);
+
 
         }
     </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>morse ou binário</title>
+    <title>binário</title>
 </head>
 
 <body>
@@ -84,8 +84,8 @@
         </div>
 
         <div class="container">
-            <textarea onkeydown="contador()" style="height: 250px;" id="textarea" rows="5" cols="100%" placeholder="Insira seu texto aqui"></textarea>
-            <textarea onkeydown="bintexto(), contador()" style="height: 250px; margin-left: 10px;" id="binario" rows="5" cols="100%" placeholder="01001001 01101110 01110011 01101001 01110010 01100001 00100000 01110011 01100101 01110101 00100000 01110100 01100101 01111000 01110100 01101111 00100000 01100001 01110001 01110101 01101001 "></textarea>
+            <textarea onkeyup="textobin(), contador()" style="height: 250px;" id="textarea" rows="5" cols="100%" placeholder="Insira seu texto aqui"></textarea>
+            <textarea onkeyup="bintexto(), contador()" style="height: 250px; margin-left: 10px;" id="binario" rows="5" cols="100%" placeholder="01001001 01101110 01110011 01101001 01110010 01100001 00100000 01110011 01100101 01110101 00100000 01110100 01100101 01111000 01110100 01101111 00100000 01100001 01110001 01110101 01101001 "></textarea>
         </div>
 
 
@@ -96,8 +96,11 @@
         </div>
 
         <div style="margin-top: 0px; margin-bottom: 0px; padding: 0px;" class="container">
-            <button style="margin-right: 10px; " onclick="copiarTexto()" style="margin-top: 5px;" type="button" class="btn btn-success">Copiar texto</button>
-            <button style="margin-top: 0px;" onclick="copiarTextoii()" style="margin-top: 5px;" type="button" class="btn btn-success">Copiar morse</button>
+            <button style="margin-right: 10px" onclick="copiarTexto()" style="margin-top: 5px;" type="button" class="btn btn-success">Copiar texto</button>
+            <button style="margin-right: 10px;margin-top: 0px;" onclick="copiarTextoii()" style="margin-top: 5px;" type="button" class="btn btn-success">Copiar binário</button>
+            <button style="margin-right: 10px; margin-top: 0px;" onclick="download()" style="margin-top: 5px;" type="button" class="btn btn-primary">Download texto</button>
+            <button style="margin-top: 0px;" onclick="download()" style="margin-top: 5px;" type="button" class="btn btn-primary">Download binário</button>
+
         </div>
     </div>
 
