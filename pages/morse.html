@@ -12,6 +12,7 @@
 
     <script src="../src/morse.js?op=07"></script>
     <script src="../src/encodemorse.js?sh=36"></script>
+    <script src="../src/copiar.js?ps=32"></script>
 
     <script>
         function contador() {
@@ -75,6 +76,11 @@
             </div>
         </nav>
 
+
+        <div id="copiado" hidden class="alert alert-success" role="alert">
+            Texto copiado para a área de transferência
+        </div>
+
         <div class="container">
             <textarea onkeyup="testem(), contador()" style="height: 250px;" id="textarea" rows="5" cols="100%" placeholder="Insira seu texto aqui"></textarea>
             <textarea onkeyup="encodedecode(), contador()" style="height: 250px; margin-left: 10px;" id="morse" rows="5" cols="100%" placeholder=".. -. ... .. .-. .- / ... . ..- / - . -..- - --- / .- --.- ..- .."></textarea>
@@ -90,6 +96,11 @@
             <p> | Linhas:
                 <p id="lines"> 0 </p>
             </p>
+        </div>
+
+        <div style="margin-top: 0px; margin-bottom: 0px; padding: 0px;" class="container">
+            <button style="margin-right: 10px; " onclick="copiarTexto()" style="margin-top: 5px;" type="button" class="btn btn-success">Copiar texto</button>
+            <button style="margin-top: 0px;" onclick="copiarTextoiv()" style="margin-top: 5px;" type="button" class="btn btn-success">Copiar morse</button>
         </div>
 
     </div>

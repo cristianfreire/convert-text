@@ -19,6 +19,7 @@
 
     <script src="../src/script.js"></script>
     <script src="../src/negrito.js"></script>
+    <script src="../src/copiar.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -30,15 +31,6 @@
         function sendCode() {
             negrito()
 
-            document.getElementById("char").innerHTML = texto.length
-            document.getElementById("word").innerHTML = texto.split(' ').length
-            document.getElementById("lines").innerHTML = texto.split('\n').length
-
-            if (texto.length == 0) {
-                document.getElementById("word").innerHTML = 0
-                document.getElementById("lines").innerHTML = 0
-                document.getElementById("result").value = ""
-            }
 
 
         }
@@ -63,13 +55,13 @@
                         <a class="nav-link" href="vaporwave.html">vaporwave</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">t̶a̶c̶h̶a̶d̶o̶</a>
+                        <a class="nav-link" href="tachado.html">t̶a̶c̶h̶a̶d̶o̶</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="invertido.html">retrevni ou ɹǝʇɹǝʌuᴉ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="negrito.html"><b>negrito</b></a>
+                        <a class="nav-link" href="#"><b>negrito</b></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="italico.html"><i>itálico</i></u></a>
@@ -87,6 +79,10 @@
             </div>
         </nav>
 
+        <div id="copiado" hidden class="alert alert-success" role="alert">
+            Texto copiado para a área de transferência
+        </div>
+
         <div class="container">
             <textarea style="height: 250px; " id="textarea" rows="5" cols="100% " placeholder="Digite ou cole seu texto aqui"></textarea>
             <textarea style="height: 250px; margin-left: 10px; font-weight: bold; " id="result" rows="5" cols="100%" placeholder="𝗗𝗶𝗴𝗶𝘁𝗲 𝗼𝘂 𝗰𝗼𝗹𝗲 𝘀𝗲𝘂 𝘁𝗲𝘅𝘁𝗼 𝗮𝗾𝘂𝗶"></textarea>
@@ -101,6 +97,11 @@
             <p>| Linhas:</p>
             <p id="lines">0</p>
         </div>
+
+        <div style="margin-top: 0px; margin-bottom: 0px; padding: 0px;" class="container">
+            <button onclick="copiarTextoiii()" style="margin-top: 5px;" type="button" class="btn btn-success">Copiar</button>
+        </div>
+
     </div>
 
 

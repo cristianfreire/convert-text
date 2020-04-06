@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="src/style.css?id=102" />
 
     <script type="text/javascript" src="src/script.js"></script>
+    <script src="src/copiar.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -35,17 +36,6 @@
 
             }
 
-        }
-
-        let copiarTexto = () => {
-            //captura o elemento input
-            const inputTest = document.querySelector("#textarea")
-
-            //seleciona todo o texto do elemento
-            inputTest.select()
-                //executa o comando copy
-                //aqui é feito o ato de copiar para a area de trabalho com base na seleção
-            document.execCommand('copy')
         }
     </script>
 
@@ -96,6 +86,10 @@
             </div>
         </nav>
 
+        <div id="copiado" hidden class="alert alert-success" role="alert">
+            Texto copiado para a área de transferência
+        </div>
+
 
         <div class="container">
             <textarea style="height: 250px;" id="textarea" rows="5" cols="100%" placeholder="Insira seu texto aqui"></textarea>
@@ -122,19 +116,6 @@
             </div>
 
         </div>
-
-
-
-
-        <!--div style="background-color: whitesmoke;" class="container">
-			<div>
-				<div>
-					<h3>Título</h3>
-					<p style="text-align: center;">Texto</p>
-				</div>
-			</div>
-		</div -->
-
     </div>
 
     <footer id="myFooter" style="margin: 0px; padding: 0px;">

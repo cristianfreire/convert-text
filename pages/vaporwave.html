@@ -15,6 +15,7 @@
     <title>vaporwave</title>
 
     <script src="../src/tv.js?as=23"></script>
+    <script src="../src/copiar.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -89,6 +90,10 @@
             </div>
         </nav>
 
+        <div id="copiado" hidden class="alert alert-success" role="alert">
+            Texto copiado para a área de transferência
+        </div>
+
         <div class="container">
             <textarea id="textarea" style="height: 250px;" rows="5" cols="100%" placeholder="Digite ou cole seu texto aqui"></textarea>
             <textarea style="height: 250px; margin-left: 10px; " id="result" rows="5" cols="100%" placeholder="Ｄ ｉ ｇ ｉ ｔ ｅ   ｏ ｕ     ｃ ｏ ｌ ｅ   ｓ ｅ ｕ   ｔ ｅ ｘ ｔ ｏ   ａ ｑ ｕ ｉ "></textarea>
@@ -103,6 +108,10 @@
             <p id="word"> 0 </p>
             <p>| Linhas:</p>
             <p id="lines">0</p>
+        </div>
+
+        <div style="margin-top: 0px; margin-bottom: 0px; padding: 0px;" class="container">
+            <button onclick="copiarTextoiii()" style="margin-top: 5px;" type="button" class="btn btn-success">Copiar</button>
         </div>
 
     </div>

@@ -13,12 +13,14 @@
     <link rel="stylesheet" href="../src/style.css?asd=99">
     <link rel="stylesheet" href="../src/footer-white.css?as=123">
 
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sublinhado</title>
 
     <script src="../src/script.js"></script>
     <script src="../src/sublinhado.js"></script>
+    <script src="../src/copiar.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -77,6 +79,10 @@
             </div>
         </nav>
 
+        <div id="copiado" hidden class="alert alert-success" role="alert">
+            Texto copiado para a área de transferência
+        </div>
+
         <div class="container">
             <textarea style="height: 250px; " id="textarea" rows="5" cols="100% " placeholder="Digite ou cole seu texto aqui"></textarea>
             <textarea style="height: 250px; margin-left: 10px;" id="result" rows="5" cols="100%" placeholder="D̲i̲g̲i̲t̲e̲ ̲o̲u̲ ̲c̲o̲l̲e̲ ̲s̲e̲u̲ ̲t̲e̲x̲t̲o̲ ̲a̲q̲u̲i̲"></textarea>
@@ -90,6 +96,10 @@
             <p id="word"> 0 </p>
             <p>| Linhas:</p>
             <p id="lines">0</p>
+        </div>
+
+        <div style="margin-top: 0px; margin-bottom: 0px; padding: 0px;" class="container">
+            <button onclick="copiarTextoiii()" style="margin-top: 5px;" type="button" class="btn btn-success">Copiar</button>
         </div>
     </div>
 

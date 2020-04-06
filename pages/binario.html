@@ -12,6 +12,7 @@
 
     <script src="../src/binario.js?o=03"></script>
     <script src="../src/bintexto.js"></script>
+    <script src="../src/copiar.js?ao=4"></script>
 
     <script>
         function contador() {
@@ -78,6 +79,10 @@
             </div>
         </nav>
 
+        <div id="copiado" hidden class="alert alert-success" role="alert">
+            Texto copiado para a área de transferência
+        </div>
+
         <div class="container">
             <textarea onkeydown="contador()" style="height: 250px;" id="textarea" rows="5" cols="100%" placeholder="Insira seu texto aqui"></textarea>
             <textarea onkeydown="bintexto(), contador()" style="height: 250px; margin-left: 10px;" id="binario" rows="5" cols="100%" placeholder="01001001 01101110 01110011 01101001 01110010 01100001 00100000 01110011 01100101 01110101 00100000 01110100 01100101 01111000 01110100 01101111 00100000 01100001 01110001 01110101 01101001 "></textarea>
@@ -90,6 +95,10 @@
             <p style="margin-left: 10px;" id="lines">Linhas: </p>
         </div>
 
+        <div style="margin-top: 0px; margin-bottom: 0px; padding: 0px;" class="container">
+            <button style="margin-right: 10px; " onclick="copiarTexto()" style="margin-top: 5px;" type="button" class="btn btn-success">Copiar texto</button>
+            <button style="margin-top: 0px;" onclick="copiarTextoii()" style="margin-top: 5px;" type="button" class="btn btn-success">Copiar morse</button>
+        </div>
     </div>
 
 
