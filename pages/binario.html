@@ -10,21 +10,24 @@
 
     <link rel="stylesheet" href="../src/style.css?lk=087">
 
-    <script src="../src/binario.js?p=112"></script>
-    <script src="../src/bintexto.js?fd=109"></script>
+    <script src="../src/binario.js?o=03"></script>
+    <script src="../src/bintexto.js"></script>
 
     <script>
         function contador() {
             characteres = document.getElementById("textarea").value
 
-            document.getElementById("char").innerHTML = characteres.length
-            document.getElementById("words").innerHTML = characteres.split(" ").length
-            document.getElementById("lines").innerHTML = characteres.split("\n").length
+            document.getElementById("char").innerHTML = "Characteres: " + characteres.length + " |"
+            document.getElementById("words").innerHTML = " Palavras: " + characteres.split(" ").length + " |"
+            document.getElementById("lines").innerHTML = " Linhas: " + characteres.split("\n").length
 
             if (characteres.length == 0) {
                 document.getElementById("words").innerHTML = 0
                 document.getElementById('lines').innerHTML = 0
             }
+
+            setTimeout("textobin()", 100);
+
         }
     </script>
 
@@ -70,34 +73,16 @@
         </nav>
 
         <div class="container">
-            <textarea onkeyup="textobin(), contador()" style="height: 250px;" id="textarea" rows="5" cols="100%" placeholder="Insira seu texto aqui"></textarea>
-            <textarea onkeyup="bintexto(), contador()" style="height: 250px; margin-left: 10px;" id="binario" rows="5" cols="100%" placeholder="01001001 01101110 01110011 01101001 01110010 01100001 00100000 01110011 01100101 01110101 00100000 01110100 01100101 01111000 01110100 01101111 00100000 01100001 01110001 01110101 01101001 "></textarea>
+            <textarea onkeydown="contador()" style="height: 250px;" id="textarea" rows="5" cols="100%" placeholder="Insira seu texto aqui"></textarea>
+            <textarea onkeydown="bintexto(), contador()" style="height: 250px; margin-left: 10px;" id="binario" rows="5" cols="100%" placeholder="01001001 01101110 01110011 01101001 01110010 01100001 00100000 01110011 01100101 01110101 00100000 01110100 01100101 01111000 01110100 01101111 00100000 01100001 01110001 01110101 01101001 "></textarea>
         </div>
+
 
         <div class="container">
-            <p>Caracteres:
-                <p id="char"> 0 </p>
-            </p>
-            <p> | Palavras:
-                <p id="words"> 0 </p>
-            </p>
-            <p> | Linhas:
-                <p id="lines"> 0 </p>
-            </p>
+            <p id="char">Characteres: </p>
+            <p style="margin-left: 10px;" id="words">Palavras: </p>
+            <p style="margin-left: 10px;" id="lines">Linhas: </p>
         </div>
-
-
-
-
-        <div style="margin: 0px; padding: 0px;" class="container">
-
-
-        </div>
-        <div style="margin: 0px; padding: 0px; margin-top: 10px;" class="container">
-
-        </div>
-
-
 
     </div>
 

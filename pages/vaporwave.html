@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vaporwave</title>
 
+    <script src="../src/tv.js?as=23"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -30,8 +31,6 @@
             document.getElementById("word").innerHTML = texto.split(' ').length
             document.getElementById("lines").innerHTML = texto.split('\n').length
 
-            var texto = document.getElementById("textarea").value
-            document.getElementById("result").innerHTML = texto
 
             if (texto == "") {
                 document.getElementById("word").innerHTML = 0
@@ -39,15 +38,11 @@
 
             }
 
+            tv()
+
 
         }
     </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-        code.presult {
-            font-family: 'Press Start 2P', cursive;
-        }
-    </style>
 
 
 </head>
@@ -90,11 +85,10 @@
 
         <div class="container">
             <textarea id="textarea" style="height: 250px;" rows="5" cols="100%" placeholder="Digite ou cole seu texto aqui"></textarea>
+            <textarea style="height: 250px; margin-left: 10px; " id="result" rows="5" cols="100%" placeholder="Ｄ ｉ ｇ ｉ ｔ ｅ   ｏ ｕ     ｃ ｏ ｌ ｅ   ｓ ｅ ｕ   ｔ ｅ ｘ ｔ ｏ   ａ ｑ ｕ ｉ "></textarea>
+
         </div>
 
-        <div class="container">
-            <code style="text-transform: uppercase;" class="presult" id="result"></code>
-        </div>
 
         <div style="margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px;" class="container">
             <p>Characteres: </p>
