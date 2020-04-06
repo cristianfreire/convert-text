@@ -8,13 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="imagem/png" href="../src/266052.png" />
 
-    <link rel="stylesheet" href="../src/style.css?id=102" />
+
+
+    <link rel="stylesheet" href="../src/style.css?asd=99">
+    <link rel="stylesheet" href="../src/footer-white.css?as=123">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vaporwave</title>
+    <title>negrito</title>
 
-    <script src="../src/tv.js?as=23"></script>
+    <script src="../src/script.js"></script>
+    <script src="../src/negrito.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -24,27 +28,21 @@
         })
 
         function sendCode() {
-            var texto = document.getElementById("textarea").value
-
+            negrito()
 
             document.getElementById("char").innerHTML = texto.length
             document.getElementById("word").innerHTML = texto.split(' ').length
             document.getElementById("lines").innerHTML = texto.split('\n').length
 
-
-            if (texto == "") {
+            if (texto.length == 0) {
                 document.getElementById("word").innerHTML = 0
                 document.getElementById("lines").innerHTML = 0
-
+                document.getElementById("result").value = ""
             }
-
-            tv()
 
 
         }
     </script>
-
-
 </head>
 
 <body>
@@ -62,10 +60,10 @@
                         <a class="nav-link" href="../">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">vaporwave</a>
+                        <a class="nav-link" href="vaporwave.html">vaporwave</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tachado.html">t̶a̶c̶h̶a̶d̶o̶</a>
+                        <a class="nav-link" href="#">t̶a̶c̶h̶a̶d̶o̶</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="invertido.html">retrevni ou ɹǝʇɹǝʌuᴉ</a>
@@ -74,7 +72,7 @@
                         <a class="nav-link" href="negrito.html"><b>negrito</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="italico.html"><i>itálico</i></a>
+                        <a class="nav-link" href="italico.html"><i>itálico</i></u></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="sublinhado.html"><u>sublinhado</u></a>
@@ -90,13 +88,12 @@
         </nav>
 
         <div class="container">
-            <textarea id="textarea" style="height: 250px;" rows="5" cols="100%" placeholder="Digite ou cole seu texto aqui"></textarea>
-            <textarea style="height: 250px; margin-left: 10px; " id="result" rows="5" cols="100%" placeholder="Ｄ ｉ ｇ ｉ ｔ ｅ   ｏ ｕ     ｃ ｏ ｌ ｅ   ｓ ｅ ｕ   ｔ ｅ ｘ ｔ ｏ   ａ ｑ ｕ ｉ "></textarea>
-
+            <textarea style="height: 250px; " id="textarea" rows="5" cols="100% " placeholder="Digite ou cole seu texto aqui"></textarea>
+            <textarea style="height: 250px; margin-left: 10px; font-weight: bold; " id="result" rows="5" cols="100%" placeholder="𝗗𝗶𝗴𝗶𝘁𝗲 𝗼𝘂 𝗰𝗼𝗹𝗲 𝘀𝗲𝘂 𝘁𝗲𝘅𝘁𝗼 𝗮𝗾𝘂𝗶"></textarea>
         </div>
 
 
-        <div style="margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px;" class="container">
+        <div style="margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; " class="container ">
             <p>Characteres: </p>
             <p id="char">0</p>
             <p>| Palavras: </p>
@@ -104,14 +101,15 @@
             <p>| Linhas:</p>
             <p id="lines">0</p>
         </div>
-
     </div>
 
-    <footer id="myFooter" style="margin: 0px; padding: 0px;">
-        <div class="container">
+
+    <footer id="myFooter" style="margin: 0px; padding: 0px; ">
+        <div class="container ">
             <div>
                 <ul>
-                    <li><a href="https://www.facebook.com/sharer/sharer.php?u=cristianfreire.github.io" id="facebook-share-btt" rel="nofollow" target="_blank" class="facebook-share-button">Compartilhar no Facebook</a></li>
+                    <li><a href="https://www.facebook.com/sharer/sharer.php?u=cristianfreire.github.io " id="facebook-share-btt
+                        " rel="nofollow " target="_blank " class="facebook-share-button ">Compartilhar no Facebook</a></li>
                 </ul>
                 <p class="footer-copyright">© 2020 Copyright - Cristian Freire</p>
 
@@ -120,10 +118,11 @@
     </footer>
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js "></script>
+
 
 </body>
 

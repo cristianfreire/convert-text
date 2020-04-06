@@ -38,22 +38,9 @@ function mod(n) {
     } else if (n == 6) {
         console.log(textOrigin)
         document.getElementById("resultado").innerHTML = textOrigin
-    } else if (n == 7) {
-        document.getElementById("textarea").style.fontStyle = "italic"
-    } else if (n == 8) {
-        document.getElementById("textarea").style.textDecoration = "underline"
-    } else if (n == 9) {
-        document.getElementById("textarea").style.fontWeight = "normal"
-        document.getElementById("textarea").style.fontStyle = "normal"
-        document.getElementById("textarea").style.textDecoration = "none"
     }
-
-
 }
 
-function negrito() {
-    $("#teste").text(document.getElementById("textarea").value)
-}
 
 function tachado() {
     var texto = document.getElementById("textarea").value
