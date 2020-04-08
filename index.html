@@ -28,33 +28,11 @@
 
     <link rel="stylesheet" href="src/style.css?id=102" />
 
-    <script type="text/javascript" src="src/script.js"></script>
+    <script type="text/javascript" src="src/script.js?id=32"></script>
     <script src="src/copiar.js"></script>
     <script src="src/download.js"></script>
+    <script src="src/contador.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $("textarea").keyup(function() {
-                sendCode()
-            })
-        })
-
-        function sendCode() {
-            var texto = document.getElementById("textarea").value
-
-
-            document.getElementById("char").innerHTML = texto.length
-            document.getElementById("word").innerHTML = texto.split(' ').length
-            document.getElementById("lines").innerHTML = texto.split('\n').length
-
-            if (texto.length == 0) {
-                document.getElementById("word").innerHTML = 0
-                document.getElementById("lines").innerHTML = 0
-
-            }
-
-        }
-    </script>
 
 
     <meta charset="UTF-8" />
@@ -107,19 +85,24 @@
             Texto copiado para a área de transferência
         </div>
 
+        <div style="margin-top: 0px;" class="container">
+            <div>
+                <h1 style="font-weight: bold;">Formate seu texto com as opções abaixo</h1>
+                <p>É só digitar ou colar seu texto da ára de transferência e clicar em uma opção, depois é só copiar ou baixar seu texto em formato txt.</p>
 
-        <div class="container">
-            <textarea style="height: 250px;" id="textarea" rows="5" cols="100%" placeholder="Insira seu texto aqui"></textarea>
+            </div>
         </div>
 
 
-        <div style="margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px;" class="container">
-            <p>Characteres: </p>
-            <p id="char">0</p>
-            <p>| Palavras: </p>
-            <p id="word"> 0 </p>
-            <p>| Linhas:</p>
-            <p id="lines">0</p>
+        <div style="margin-top: 0px; padding-top: 0px;" class="container">
+            <textarea onkeyup="contador()" style="height: 250px;" id="textarea" rows="5" cols="100%" placeholder="Insira seu texto aqui"></textarea>
+        </div>
+
+
+        <div style="padding-top: 0px; margin-top: 0px;" class="container">
+            <p id="char">Characteres: </p>
+            <p style="margin-left: 10px;" id="words">Palavras: </p>
+            <p style="margin-left: 10px;" id="lines">Linhas: </p>
         </div>
 
         <div style="margin-top: 0px; margin-bottom: 0px; padding-top: 0px;" class="container">
@@ -131,20 +114,75 @@
                 <button onclick="mod(5)" style="margin-top: 5px;" type="button" class="btn btn-secondary">Primeira letra de cada palavra</button>
                 <button onclick="copiarTexto()" style="margin-top: 5px;" type="button" class="btn btn-success">Copiar</button>
                 <button onclick="download()" style="margin-top: 5px;" type="button" class="btn btn-primary">Download</button>
-
-
             </div>
 
         </div>
+
+        <div style="padding-top: 0px; margin-top: 0px;" class="container">
+            <div>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick" />
+                    <input type="hidden" name="hosted_button_id" value="DMUHCFBG7G6H2" />
+                    <input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Faça doações com o botão do PayPal" />
+                    <img alt="" border="0" src="https://www.paypal.com/pt_BR/i/scr/pixel.gif" width="1" height="1" />
+                </form>
+            </div>
+        </div>
+
+        <div style="margin-top: 0px; padding: 0px;" class="container">
+            <div style="text-align: center;">
+                <h2 style="font-size: 20px;"><b>minúsculo:</b></h2>
+                <p>Se você tem um texto todo em caixa alta e quer deixa-lo minúsculo esta ferramenta faz isso para você, é só inserir seu texto e clicar no botão "minúsculo"</p>
+                <p><b>se você tem um texto todo em caixa alta e quer deixa-lo minúsculo esta ferramenta faz isso para você, é só inserir seu texto e clicar no botão "minúsculo"</b></p>
+            </div>
+        </div>
+        <hr/>
+        <div style="text-align: center; padding: 0px;" class="container">
+            <div>
+                <h2 style="font-size: 20px;"><b>MAIÚSCULO:</b></h2>
+                <p>Esta ferramenta transforma qualquer texto que você digitar em maiúsculo</p>
+                <p><b>ESTA FERRAMENTA TRANSFORMA QUALQUER TEXTO QUE VOCÊ DIGITAR EM MAIÚSCULO</b></p>
+            </div>
+        </div>
+        <hr/>
+        <div style="text-align: center; padding: 0px;" class="container">
+            <div>
+                <h2 style="font-size: 20px;"><b>AlTeRnAdO:</b></h2>
+                <p>Utilize esta ferramenta para deixar seu texo nada peculiar</p>
+                <p><b>UtIlIzE EsTa fErRaMeNtA PaRa dEiXaR SeU TeXo nAdA PeCuLiAr</b></p>
+            </div>
+        </div>
+        <hr/>
+        <div style="text-align: center; padding: 0px;" class="container">
+            <div>
+                <h2 style="font-size: 20px;"><b>aLtErNaDo:</b></h2>
+                <p>Utilize esta ferramenta para deixar seu texo nada peculiar, mas inicinado pela pela primeira letra minúscula</p>
+                <p><b>Utilize esta ferramenta para deixar seu texo nada peculiar, mas inicinado pela pela primeira letra minúscula</b></p>
+            </div>
+        </div>
+        <hr/>
+        <div style="text-align: center; padding: 0px;" class="container">
+            <div>
+                <h2 style="font-size: 20px;"><b>Primeira letra de cada palavra:</b></h2>
+                <p>Transforme todas as palavras do seu texto em substantivo próprio, colocando a primeira letra de cada palvra em maiúsculo</p>
+                <p><b>Transforme Todas As Palavras Do Seu Texto Em Substantivo Próprio, Colocando A Primeira Letra De Cada Palvra Em Maiúsculo</b></p>
+            </div>
+        </div>
+
+        <div class="container">
+            <button type="button" class="btn btn-link"><a href="form/form.html">Reportar bug</a></button>
+        </div>
+
     </div>
 
-    <footer id="myFooter" style="margin: 0px; padding: 0px;">
+    <footer style="background-color: gray; margin: 0px; padding: 0px;" id="myFooter" style="margin: 0px; padding: 0px;">
         <div class="container">
             <div>
                 <ul>
-                    <li><a href="https://www.facebook.com/sharer/sharer.php?u=converttexto.com" id="facebook-share-btt" rel="nofollow" target="_blank" class="facebook-share-button">Compartilhar no Facebook</a></li>
+                    <P>Se você gostou compartilhe este site clicando no link abaixo</P>
+                    <li><a style="color: rgb(192, 203, 211);" href="https://www.facebook.com/sharer/sharer.php?u=converttexto.com" id="facebook-share-btt" rel="nofollow" target="_blank" class="facebook-share-button">Compartilhar no Facebook</a></li>
                 </ul>
-                <p class="footer-copyright">© 2020 Copyright - Cristian Freire</p>
+                <p style="color: white;" class="footer-copyright">© 2020 Copyright - Cristian Freire</p>
 
             </div>
         </div>

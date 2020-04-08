@@ -29,7 +29,8 @@ function mod(n) {
         //Primeire letra
     } else if (n == 5) {
         function primeiraLetraMaiuscula(Frase) {
-            var splitFrase = textOrigin.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+            var min = textOrigin.toLowerCase()
+            var splitFrase = min.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
             return splitFrase
 
         }
