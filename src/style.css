@@ -57,3 +57,7 @@ body {
     margin: 0px 15px;
     line-height: 2;
 }
+
+p {
+    text-align: justify;
+}

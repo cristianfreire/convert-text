@@ -13,13 +13,16 @@
     <link rel="stylesheet" href="../src/style.css?asd=99">
     <link rel="stylesheet" href="../src/footer-white.css?as=123">
 
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tachado</title>
 
     <script src="../src/script.js"></script>
+    <script src="../src/tachar.js?id=89"></script>
     <script src="../src/copiar.js"></script>
     <script src="../src/download.js"></script>
+    <script src="../src/contador.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -29,25 +32,8 @@
         })
 
         function sendCode() {
-            var texto = document.getElementById("textarea").value
-            result = ""
-            for (var lk = 0; lk <= texto.length; lk++) {
-                result += texto[lk] + "̶"
-            }
-
-            result = result.split("undefined")
-            document.getElementById("result").value = result.join("")
-
-            document.getElementById("char").innerHTML = texto.length
-            document.getElementById("word").innerHTML = texto.split(' ').length
-            document.getElementById("lines").innerHTML = texto.split('\n').length
-
-            if (texto.length == 0) {
-                document.getElementById("word").innerHTML = 0
-                document.getElementById("lines").innerHTML = 0
-                document.getElementById("result").value = ""
-            }
-
+            sublinhado()
+            contador()
 
         }
     </script>
@@ -80,7 +66,7 @@
                         <a class="nav-link" href="negrito.html"><b>negrito</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="italico.html"><i>itálico</i></a>
+                        <a class="nav-link" href="italico.html"><i>itálico</i></u></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="sublinhado.html"><u>sublinhado</u></a>
@@ -95,47 +81,84 @@
             </div>
         </nav>
 
-
         <div id="copiado" hidden class="alert alert-success" role="alert">
             Texto copiado para a área de transferência
         </div>
 
-        <div class="container">
-            <textarea style="height: 250px; " id="textarea" rows="5" cols="100% " placeholder="Digite ou cole seu texto aqui "></textarea>
-            <textarea style="height: 250px; margin-left: 10px; " id="result" rows="5" cols="100%" placeholder="D̶i̶g̶i̶t̶e̶ ̶o̶u̶ ̶c̶o̶l̶e̶ ̶s̶e̶u̶ ̶t̶e̶x̶t̶o̶ ̶a̶q̶u̶i̶ "></textarea>
+        <div style="margin-top: 0px; padding-top: 0px;" class="container">
+            <div style="text-align: center;">
+                <h1>T̶a̶c̶h̶a̶d̶o̶</h1>
+                <p>Censure seu texto instantâneamente com essa ferramenta rápida e fácil de usar</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 0px; padding-top: 0px;" class="container">
+            <textarea style="height: 250px; " id="textarea" rows="5" cols="100% " placeholder="Digite ou cole seu texto aqui"></textarea>
+            <textarea style="height: 250px; margin-left: 10px;" id="result" rows="5" cols="100%" placeholder="D̶i̶g̶i̶t̶e̶ ̶o̶u̶ ̶c̶o̶l̶e̶ ̶s̶e̶u̶ ̶t̶e̶x̶t̶o̶ ̶a̶q̶u̶i̶"></textarea>
         </div>
 
 
-        <div style="margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; " class="container ">
-            <p>Characteres: </p>
-            <p id="char">0</p>
-            <p>| Palavras: </p>
-            <p id="word"> 0 </p>
-            <p>| Linhas:</p>
-            <p id="lines">0</p>
+        <div style="margin-top: 0px; padding-top: 0px;" class="container">
+            <p id="char">Characteres: </p>
+            <p style="margin-left: 10px;" id="words">Palavras: </p>
+            <p style="margin-left: 10px;" id="lines">Linhas: </p>
         </div>
 
         <div style="margin-top: 0px; margin-bottom: 0px; padding: 0px;" class="container">
             <button style="margin-right: 10px;" onclick="copiarTextoiii()" style="margin-top: 5px;" type="button" class="btn btn-success">Copiar</button>
             <button style="margin-top: 0px;" onclick="downResult()" style="margin-top: 5px;" type="button" class="btn btn-primary">Download</button>
+
         </div>
+
+
+        <div class="container">
+            <div>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick" />
+                    <input type="hidden" name="hosted_button_id" value="DMUHCFBG7G6H2" />
+                    <input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Faça doações com o botão do PayPal" />
+                    <img alt="" border="0" src="https://www.paypal.com/pt_BR/i/scr/pixel.gif" width="1" height="1" />
+                </form>
+            </div>
+        </div>
+
+        <div style="margin-top: 0px; padding: 0px;" class="container">
+            <div style="text-align: center;">
+                <h2 style="font-size: 20px;"><b>Risque um texto que talvez seja indesejado:</b></h2>
+                <p>Riscar um texto significa que ele não é mais válido, mas já valeu, ou também pode estar subentendido. Se você quiser invalidar ou palavra, um trecho, ou até um texto completo, utilize esta simples ferramenta.</p>
+            </div>
+        </div>
+
+
+        <div style="margin-top: 0px; padding: 0px;" class="container">
+            <div style="text-align: center;">
+                <p><b>Digite apenas o que você quer anular</b></p>
+                <p>D̶i̶g̶i̶t̶e̶ ̶a̶p̶e̶n̶a̶s̶ ̶o̶ ̶q̶u̶e̶ ̶v̶o̶c̶ê̶ ̶q̶u̶e̶r̶ ̶a̶n̶u̶l̶a̶r̶</p>
+            </div>
+        </div>
+
+
+
+        <div class="container">
+            <button type="button" class="btn btn-link"><a href="form/form.html">Reportar bug</a></button>
+        </div>
+
+
     </div>
 
 
-
-
-    <footer id="myFooter" style="margin: 0px; padding: 0px; ">
-        <div class="container ">
+    <footer style="background-color: gray; margin: 0px; padding: 0px;" id="myFooter" style="margin: 0px; padding: 0px;">
+        <div class="container">
             <div>
                 <ul>
-                    <li><a href="https://www.facebook.com/sharer/sharer.php?u=converttexto.com" id="facebook-share-btt" rel="nofollow " target="_blank " class="facebook-share-button ">Compartilhar no Facebook</a></li>
+                    <P>Se você gostou compartilhe este site clicando no link abaixo</P>
+                    <li><a style="color: rgb(192, 203, 211);" href="https://www.facebook.com/sharer/sharer.php?u=converttexto.com" id="facebook-share-btt" rel="nofollow" target="_blank" class="facebook-share-button">Compartilhar no Facebook</a></li>
                 </ul>
-                <p class="footer-copyright">© 2020 Copyright - Cristian Freire</p>
+                <p style="color: white;" class="footer-copyright">© 2020 Copyright - Cristian Freire</p>
 
             </div>
         </div>
     </footer>
-
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>

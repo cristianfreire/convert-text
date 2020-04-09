@@ -10,5 +10,6 @@ function testem() {
     for (var i in txt) {
         code += symbols[letters.indexOf(txt[i])] + " ";
     }
+    code = code.split("undefined")
     document.getElementById("morse").value = code;
 }

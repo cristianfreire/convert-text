@@ -10,6 +10,4 @@ function contador() {
         document.getElementById('lines').innerHTML = " Linhas: " + 0
     }
 
-
-
 }

@@ -11,28 +11,12 @@
     <link rel="stylesheet" href="../src/style.css?lk=087">
 
 
-    <script src="../src/binario.js?o=03"></script>
-    <script src="../src/bintexto.js"></script>
+    <script src="../src/binario.js?id=09"></script>
+    <script src="../src/bintexto.js?id=8"></script>
     <script src="../src/copiar.js?ao=4"></script>
     <script src="../src/download.js"></script>
+    <script src="../src/contador.js"></script>
 
-    <script>
-        function contador() {
-            characteres = document.getElementById("textarea").value
-
-            document.getElementById("char").innerHTML = "Characteres: " + characteres.length
-            document.getElementById("words").innerHTML = " Palavras: " + characteres.split(" ").length
-            document.getElementById("lines").innerHTML = " Linhas: " + characteres.split("\n").length
-
-            if (characteres.length == 0) {
-                document.getElementById("words").innerHTML = " Palavras: " + 0
-                document.getElementById('lines').innerHTML = " Linhas: " + 0
-            }
-
-
-
-        }
-    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,7 +41,7 @@
                         <a class="nav-link" href="vaporwave.html">vaporwave</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tachado.html">t̶a̶c̶h̶a̶d̶o̶</a>
+                        <a class="nav-link" href="riscado.html">t̶a̶c̶h̶a̶d̶o̶</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="invertido.html">retrevni ou ɹǝʇɹǝʌuᴉ</a>
@@ -85,13 +69,20 @@
             Texto copiado para a área de transferência
         </div>
 
-        <div class="container">
+        <div style="margin-top: 0px;" class="container">
+            <div style="text-align: center;">
+                <h1 style="font-weight: bold;">Binário</h1>
+                <p>Aqui você pode transformar seu texto normal em binário ou traduzir de binário para texto normal muito rápido e fácil de usar</p>
+            </div>
+        </div>
+
+        <div style="padding-top: 0px; margin-top: 0px;" class="container">
             <textarea onkeyup="textobin(), contador()" style="height: 250px;" id="textarea" rows="5" cols="100%" placeholder="Insira seu texto aqui"></textarea>
             <textarea onkeyup="bintexto(), contador()" style="height: 250px; margin-left: 10px;" id="binario" rows="5" cols="100%" placeholder="01001001 01101110 01110011 01101001 01110010 01100001 00100000 01110011 01100101 01110101 00100000 01110100 01100101 01111000 01110100 01101111 00100000 01100001 01110001 01110101 01101001 "></textarea>
         </div>
 
 
-        <div class="container">
+        <div style="margin-top: 0px; padding-top: 0px;" class="container">
             <p id="char">Characteres: </p>
             <p style="margin-left: 10px;" id="words">Palavras: </p>
             <p style="margin-left: 10px;" id="lines">Linhas: </p>
@@ -102,22 +93,50 @@
             <button style="margin-right: 10px;margin-top: 0px;" onclick="copiarTextoii()" style="margin-top: 5px;" type="button" class="btn btn-success">Copiar binário</button>
             <button style="margin-right: 10px; margin-top: 0px;" onclick="download()" style="margin-top: 5px;" type="button" class="btn btn-primary">Download texto</button>
             <button style="margin-top: 0px;" onclick="downBin()" style="margin-top: 5px;" type="button" class="btn btn-primary">Download binário</button>
-
         </div>
+
+        <div class="container">
+            <div>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick" />
+                    <input type="hidden" name="hosted_button_id" value="DMUHCFBG7G6H2" />
+                    <input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Faça doações com o botão do PayPal" />
+                    <img alt="" border="0" src="https://www.paypal.com/pt_BR/i/scr/pixel.gif" width="1" height="1" />
+                </form>
+            </div>
+        </div>
+
+        <div style="padding-top: 0px; margin-top: 0px;" class="container">
+            <div style="text-align: center;">
+                <h2 style="font-size: 20px;"><b>binário:</b></h2>
+                <p>O sistema binário é um sistema de numeração posicional representado por 0 e 1, apenas os sistemas computacionais utilizam. </p>
+                <p>Se você tem um texto normal é quer colocar em código binário, cole ou digite-o no espaço em branco da esquerda, ou se você tiver um código bináio e quer traduzir para texto normal, digite ou cole-o no espaço em branco da direita, após
+                    ter feito isso se você utilizou a primeira opção copie utilizando a opção "Copiar binário" ou baixe utilizando o botão "Download binário". Se você optou pela segunda opção clique no botão "Copiar texto", para baixar "Download texto".</p>
+                <p>binario | <b>01100010 01101001 01101110 01100001 01110010 01101001 01101111</b> </p>
+                <p style="color: red;">Não implementado as acentuações</p>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <button type="button" class="btn btn-link"><a href="form/form.html">Reportar bug</a></button>
+        </div>
+
     </div>
 
-
-    <footer id="myFooter" style="margin: 0px; padding: 0px;">
+    <footer style="background-color: gray; margin: 0px; padding: 0px;" id="myFooter" style="margin: 0px; padding: 0px;">
         <div class="container">
             <div>
                 <ul>
-                    <li><a href="https://www.facebook.com/sharer/sharer.php?u=converttexto.com" id="facebook-share-btt" rel="nofollow" target="_blank" class="facebook-share-button">Compartilhar no Facebook</a></li>
+                    <P>Se você gostou compartilhe este site clicando no link abaixo</P>
+                    <li><a style="color: rgb(192, 203, 211);" href="https://www.facebook.com/sharer/sharer.php?u=converttexto.com" id="facebook-share-btt" rel="nofollow" target="_blank" class="facebook-share-button">Compartilhar no Facebook</a></li>
                 </ul>
-                <p class="footer-copyright">© 2020 Copyright - Cristian Freire</p>
+                <p style="color: white;" class="footer-copyright">© 2020 Copyright - Cristian Freire</p>
 
             </div>
         </div>
     </footer>
+
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

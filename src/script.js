@@ -41,15 +41,3 @@ function mod(n) {
         document.getElementById("resultado").innerHTML = textOrigin
     }
 }
-
-
-function tachado() {
-    var texto = document.getElementById("textarea").value
-    result = ""
-    for (var lk = 0; lk <= texto.length; lk++) {
-        result += texto[lk] + "̶"
-    }
-
-    result = result.split("undefined")
-    document.getElementById("result").value = result.join("")
-}

@@ -53,6 +53,8 @@ function encodedecode() {
         messageConverted.push(" ");
     });
 
-    document.getElementById("textarea").value = messageConverted.join("")
+    var conv = messageConverted.join("")
+    conv = conv.split("undefined")
+    document.getElementById("textarea").value = conv
 
 }

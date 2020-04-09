@@ -16,6 +16,7 @@
 
     <script type="text/javascript" src="../src/inverter.js"></script>
     <script src="../src/download.js"></script>
+    <script src="../src/contador.js"></script>
 
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
@@ -30,18 +31,7 @@
             })
 
         function sendCode() {
-            var texto = document.getElementById("textarea").value
-
-
-            document.getElementById("char").innerHTML = texto.length
-            document.getElementById("word").innerHTML = texto.split(' ').length
-            document.getElementById("lines").innerHTML = texto.split('\n').length
-
-            if (texto == "") {
-                document.getElementById("word").innerHTML = 0
-                document.getElementById("lines").innerHTML = 0
-
-            }
+            contador()
 
         }
 
@@ -97,7 +87,7 @@
                         <a class="nav-link" href="vaporwave.html">vaporwave</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tachado.html">t̶a̶c̶h̶a̶d̶o̶</a>
+                        <a class="nav-link" href="riscado.html">t̶a̶c̶h̶a̶d̶o̶</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">retrevni ou ɹǝʇɹǝʌuᴉ</a>
@@ -126,22 +116,26 @@
             Texto copiado para a área de transferência
         </div>
 
+        <div style="padding-top: 0px; margin-top: 0px;" class="container">
+            <div style="text-align: center;">
+                <h1>Escreva de <b>trás pra frente</b> ou de <b>cabeça pra baixo</b></h1>
+                <p>Esta ferramenta inverte seu texto horizontalmente ou verticalmente</p>
+            </div>
+        </div>
 
-        <div class="container">
+
+        <div style="margin-top: 0px; padding-top: 0px;" class="container">
             <textarea name="original" id="textarea" style="height: 250px; " rows="5" cols="100%" placeholder="Digite seu texto aqui"></textarea>
         </div>
 
 
-        <div style="margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px;" class="container">
-            <p>Characteres: </p>
-            <p id="char">0</p>
-            <p>| Palavras: </p>
-            <p id="word"> 0 </p>
-            <p>| Linhas:</p>
-            <p id="lines">0</p>
+        <div style="padding-top: 0px; margin-top: 0px;" class="container">
+            <p id="char">Characteres: </p>
+            <p style="margin-left: 10px;" id="words">Palavras: </p>
+            <p style="margin-left: 10px;" id="lines">Linhas: </p>
         </div>
 
-        <div class="container">
+        <div style="padding-top: 0px; margin-top: 0px;" class="container">
             <button style="margin-right: 10px;" onclick="inverter(1)" type="button" class="btn btn-secondary">retrevni</button>
             <button style="margin-right: 10px;" onclick="flip()" type="button" class="btn btn-secondary ">ɹǝʇɹǝʌuᴉ</button>
             <button style="margin-right: 10px;" onclick="copiarTexto()" type="button" class="btn btn-success">Copiar</button>
@@ -150,18 +144,49 @@
         </div>
 
 
+        <div style="margin-top: 0px; padding-top: 0px;" class="container">
+            <div>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick" />
+                    <input type="hidden" name="hosted_button_id" value="DMUHCFBG7G6H2" />
+                    <input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Faça doações com o botão do PayPal" />
+                    <img alt="" border="0" src="https://www.paypal.com/pt_BR/i/scr/pixel.gif" width="1" height="1" />
+                </form>
+            </div>
+        </div>
 
+        <div style="margin-top: 0px; padding: 0px;" class="container">
+            <div style="text-align: center;">
+                <h2 style="font-size: 20px;"><b>Invertido horizontalmente:</b></h2>
+                <p>Transforme seu texto como se você estivesse olhando em um espelho, depois é só copiar e colar onde você quiser ou se prefierir pode baixar em formato txt clicando no botão de "Dwnload"</p>
+                <p> <b>etnemlatnoziroh oditrevni otxeT</b> </p>
+            </div>
+        </div>
+        <hr/>
+        <div style="text-align: center; padding: 0px;" class="container">
+            <div>
+                <h2 style="font-size: 20px;"><b>Invertido verticalmente:</b></h2>
+                <p>Coloque seu texto de cabeça para baixo facilmente utilizando essa ferramenta, se quiser ler é só virar a cabeça 180°, este texto também você pode copiar ou baixar</p>
+                <p><b>oxıɐq ɐɹɐd ɐçǝqɐɔ ǝp ǝɥןO</b></p>
+                <p style="color: red;">Este formato só permite minúscula, por enquanto</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <button type="button" class="btn btn-link"><a href="form/form.html">Reportar bug</a></button>
+        </div>
 
     </div>
 
 
-    <footer id="myFooter" style="margin: 0px; padding: 0px;">
+    <footer style="background-color: gray; margin: 0px; padding: 0px;" id="myFooter" style="margin: 0px; padding: 0px;">
         <div class="container">
             <div>
                 <ul>
-                    <li><a href="https://www.facebook.com/sharer/sharer.php?u=converttexto.com" id="facebook-share-btt" rel="nofollow" target="_blank" class="facebook-share-button">Compartilhar no Facebook</a></li>
+                    <P>Se você gostou compartilhe este site clicando no link abaixo</P>
+                    <li><a style="color: rgb(192, 203, 211);" href="https://www.facebook.com/sharer/sharer.php?u=converttexto.com" id="facebook-share-btt" rel="nofollow" target="_blank" class="facebook-share-button">Compartilhar no Facebook</a></li>
                 </ul>
-                <p class="footer-copyright">© 2020 Copyright - Cristian Freire</p>
+                <p style="color: white;" class="footer-copyright">© 2020 Copyright - Cristian Freire</p>
 
             </div>
         </div>
