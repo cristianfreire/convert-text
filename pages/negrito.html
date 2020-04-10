@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -21,34 +20,8 @@
     <script src="../src/negrito.js"></script>
     <script src="../src/copiar.js"></script>
     <script src="../src/download.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $("textarea").keyup(function() {
-                sendCode()
-            })
-        })
+    <script src="../src/contador.js"></script>
 
-        function sendCode() {
-            negrito()
-            contador()
-        }
-
-        function contador() {
-            characteres = document.getElementById("textarea").value
-
-            document.getElementById("char").innerHTML = "Characteres: " + characteres.length
-            document.getElementById("words").innerHTML = " Palavras: " + characteres.split(" ").length
-            document.getElementById("lines").innerHTML = " Linhas: " + characteres.split("\n").length
-
-            if (characteres.length == 0) {
-                document.getElementById("words").innerHTML = " Palavras: " + 0
-                document.getElementById('lines').innerHTML = " Linhas: " + 0
-            }
-
-
-        }
-    </script>
 </head>
 
 <body>
@@ -106,7 +79,7 @@
         </div>
 
         <div style="margin-top: 0px; padding-top: 0px;" class="container">
-            <textarea style="height: 250px; " id="textarea" rows="5" cols="100% " placeholder="Digite ou cole seu texto aqui"></textarea>
+            <textarea onkeyup="negrito(), contador()" style="height: 250px; " id="textarea" rows="5" cols="100% " placeholder="Digite ou cole seu texto aqui"></textarea>
             <textarea style="height: 250px; margin-left: 10px; font-weight: bold; " id="result" rows="5" cols="100%" placeholder="𝗗𝗶𝗴𝗶𝘁𝗲 𝗼𝘂 𝗰𝗼𝗹𝗲 𝘀𝗲𝘂 𝘁𝗲𝘅𝘁𝗼 𝗮𝗾𝘂𝗶"></textarea>
         </div>
 

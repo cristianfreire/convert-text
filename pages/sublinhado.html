@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="imagem/png" href="../src/266052.png" />
-
-
 
     <link rel="stylesheet" href="../src/style.css?asd=997">
     <link rel="stylesheet" href="../src/footer-white.css?as=123">
@@ -19,40 +15,11 @@
     <title>sublinhado</title>
 
     <script src="../src/script.js"></script>
-    <script src="../src/sublinhado.js?id=89"></script>
+    <script src="../src/sublinhado.js?id=99"></script>
     <script src="../src/copiar.js"></script>
     <script src="../src/download.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $("textarea").keyup(function() {
-                sendCode()
-            })
-        })
+    <script src="../src/contador.js"></script>
 
-        function sendCode() {
-            sublinhado()
-            contador()
-
-
-        }
-
-        function contador() {
-            characteres = document.getElementById("textarea").value
-
-            document.getElementById("char").innerHTML = "Characteres: " + characteres.length
-            document.getElementById("words").innerHTML = " Palavras: " + characteres.split(" ").length
-            document.getElementById("lines").innerHTML = " Linhas: " + characteres.split("\n").length
-
-            if (characteres.length == 0) {
-                document.getElementById("words").innerHTML = " Palavras: " + 0
-                document.getElementById("lines").innerHTML = " Linhas: " + 0
-                document.getElementById("result").value = ""
-            }
-
-
-        }
-    </script>
 </head>
 
 <body>
@@ -111,7 +78,7 @@
         </div>
 
         <div style="margin-top: 0px; padding-top: 0px;" class="container">
-            <textarea style="height: 250px; " id="textarea" rows="5" cols="100% " placeholder="Digite ou cole seu texto aqui"></textarea>
+            <textarea onkeyup="contador(), sublinhado()" style="height: 250px; " id="textarea" rows="5" cols="100% " placeholder="Digite ou cole seu texto aqui"></textarea>
             <textarea style="height: 250px; margin-left: 10px;" id="result" rows="5" cols="100%" placeholder="D̲i̲g̲i̲t̲e̲ ̲o̲u̲ ̲c̲o̲l̲e̲ ̲s̲e̲u̲ ̲t̲e̲x̲t̲o̲ ̲a̲q̲u̲i̲"></textarea>
         </div>
 
@@ -123,7 +90,7 @@
         </div>
 
         <div style="margin-top: 0px; margin-bottom: 0px; padding-top: 0px;" class="container">
-            <button style="margin-right: 10px;" onclick="copiarTextoiii()" style="margin-top: 5px;" type="button" class="btn btn-success">Copiar</button>
+            <button onkeyup="sublinhado(), contador()" style="margin-right: 10px;" onclick="copiarTextoiii()" style="margin-top: 5px;" type="button" class="btn btn-success">Copiar</button>
             <button style="margin-top: 0px;" onclick="downResult()" style="margin-top: 5px;" type="button" class="btn btn-primary">Download</button>
         </div>
 
@@ -173,8 +140,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js "></script>
-
-
 </body>
 
 </html>

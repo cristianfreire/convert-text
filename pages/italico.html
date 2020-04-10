@@ -21,34 +21,8 @@
     <script src="../src/italico.js"></script>
     <script src="../src/copiar.js"></script>
     <script src="../src/download.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $("textarea").keyup(function() {
-                sendCode()
-            })
-        })
+    <script src="../src/contador.js"></script>
 
-        function sendCode() {
-            italico()
-            contador()
-        }
-
-        function contador() {
-            characteres = document.getElementById("textarea").value
-
-            document.getElementById("char").innerHTML = "Characteres: " + characteres.length
-            document.getElementById("words").innerHTML = " Palavras: " + characteres.split(" ").length
-            document.getElementById("lines").innerHTML = " Linhas: " + characteres.split("\n").length
-
-            if (characteres.length == 0) {
-                document.getElementById("words").innerHTML = " Palavras: " + 0
-                document.getElementById('lines').innerHTML = " Linhas: " + 0
-            }
-
-
-        }
-    </script>
 </head>
 
 <body>
@@ -105,7 +79,7 @@
         </div>
 
         <div style="padding-top: 0px; margin-top: 0px;" class="container">
-            <textarea style="height: 250px; " id="textarea" rows="5" cols="100% " placeholder="Digite ou cole seu texto aqui"></textarea>
+            <textarea onkeyup="italico(), contador()" style="height: 250px; " id="textarea" rows="5" cols="100% " placeholder="Digite ou cole seu texto aqui"></textarea>
             <textarea style="height: 250px; margin-left: 10px;" id="result" rows="5" cols="100%" placeholder="𝘋𝘪𝘨𝘪𝘵𝘦 𝘰𝘶 𝘤𝘰𝘭𝘦 𝘴𝘦𝘶 𝘵𝘦𝘹𝘵𝘰 𝘢𝘲𝘶𝘪"></textarea>
         </div>
 

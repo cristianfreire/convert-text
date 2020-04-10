@@ -6,6 +6,12 @@ function sublinhado() {
         result += txt[lk] + "̲"
     }
 
+
     result = result.split("undefined")
-    document.getElementById("result").value = result.join("")
+    if (txt.length != 0) {
+        document.getElementById("result").value = result.join("")
+    } else {
+        document.getElementById("result").value = ""
+
+    }
 }
