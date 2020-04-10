@@ -1,4 +1,4 @@
-function sublinhado() {
+function tachar() {
     var txt = document.getElementById("textarea").value.trim().split(""),
         result = ""
     var result = ""
